@@ -24,6 +24,19 @@
   --footer-address-color: rgba(255, 255, 255, 0.6);
 }
 
+.container {
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 body {
   font-size: 14px;
   font-weight: 400;
@@ -39,6 +52,8 @@ body {
 }
 
 .header-logo {
+  margin-top: 24;
+  margin-bottom: 25;
   font-family: 'Raleway', sans-serif;
   font-size: 26px;
   line-height: 1.19;
@@ -89,6 +104,8 @@ body {
 }
 
 .title-text {
+  margin-top: 0;
+  margin-bottom: 30px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -99,9 +116,12 @@ body {
 }
 
 .button {
+  border-radius: 4px;
+  padding: 10px 32px;
   font-family: inherit;
   cursor: pointer;
   text-align: center;
+  border: 1px solid transparent;
 }
 
 .button.primery {
@@ -122,6 +142,7 @@ body {
 }
 
 .button.secondary {
+  border-color: var(--title-text-color);
   font-family: inherit;
   background-color: var(--secondary-bg-color);
   color: var(--title-text-color);
@@ -139,6 +160,8 @@ body {
 
 /* features */
 .features-title {
+  margin-top: 0;
+  margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -154,6 +177,8 @@ body {
 
 /* direction */
 .direction-title {
+  margin-top: 0;
+  margin-bottom: 50px;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
@@ -168,13 +193,22 @@ body {
 }
 
 .team-title {
+  margin-top: 0;
+  margin-bottom: 50px;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
   color: var(--title-text-color);
 }
 
+.team-foto {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
 .team-expert {
+  margin-top: 0;
+  margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -199,6 +233,8 @@ body {
 }
 
 .footer-logo {
+  margin-top: 0;
+  margin-bottom: 20px;
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
   font-size: 26px;
@@ -219,7 +255,15 @@ body {
 .footer-address-item a:focus {
   color: var(--accent-color);
 }
+
+.address {
+  margin-top: 0;
+  margin-bottom: 9px;
+}
+
 .footer-address-link {
+  margin-top: 0;
+  margin-bottom: 9px;
   font-weight: normal;
   font-size: 14px;
   line-height: 1.71;
@@ -232,6 +276,11 @@ body {
   font-size: 14px;
   line-height: 1.71;
   color: var(--footer-address-color);
+}
+
+.footer-address-mailto {
+  margin-top: 0;
+  margin-bottom: 9px;
 }
 /* end footer */
 
@@ -246,6 +295,10 @@ body {
 }
 
 .filtr-btn {
+  border-radius: 4px;
+  padding: 6px 22px;
+  display: inline-block;
+  border: 1px solid transparent;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.63;
@@ -256,7 +309,15 @@ body {
 /* end portfolio filtr */
 
 /* portfolio service */
+
+.service-jpg {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
 .service-title {
+  margin-top: 0;
+  margin-bottom: 4px;
   font-weight: bold;
   font-size: 18px;
   line-height: 2;
