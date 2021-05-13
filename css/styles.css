@@ -22,12 +22,15 @@
   --secondary-bg-color: #f5f4fa;
   --link-services-color: #188ce8;
   --footer-address-color: rgba(255, 255, 255, 0.6);
+  --border-color: #ececec;
+  --portfolio-bg: #eeeeee;
+  --color-bg: #e5e5e5;
+  --jpg-margin: 30px;
 }
 
 .container {
-  margin-top: auto;
-  margin-bottom: auto;
   width: 1200px;
+  margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -35,6 +38,16 @@
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
+}
+.list {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+img {
+  display: block;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -46,18 +59,75 @@ body {
   background-color: var(--primary-white-color);
 }
 
+.visually-hidden {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+}
+
 /* header */
+.header {
+  background-color: var(--primary-white-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.header .container {
+  display: flex;
+}
+
+.container > .header-nav-menu {
+  margin: auto;
+}
+
 .header-nav-menu .current {
+  border-bottom: 2px solid var(--accent-color);
   color: var(--accent-color);
 }
 
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
 .header-logo {
-  margin-top: 24;
-  margin-bottom: 25;
+  font-weight: 700;
   font-family: 'Raleway', sans-serif;
   font-size: 26px;
   line-height: 1.19;
   color: var(--accent-color);
+  text-decoration: none;
+  display: block;
+}
+
+.header-nav-menu .header-logo {
+  margin-right: 93px;
+}
+
+.header-nav-menu,
+.header-contact {
+  display: flex;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 0;
+}
+
+.header-nav-menu .header-nav-menu-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.header-contact .header-contact-mailto,
+.header-contact-tel {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .header-logo-studio {
@@ -100,7 +170,17 @@ body {
 
 /* title webstudio*/
 .title {
-  background: var(--primary-color-hf);
+  padding-top: 200px;
+  padding-bottom: 200px;
+
+  background-color: var(--primary-color-hf);
+  color: var(--primary-white-color);
+  text-align: center;
+}
+
+.title .container {
+  padding-left: 250px;
+  padding-right: 250px;
 }
 
 .title-text {
@@ -109,19 +189,21 @@ body {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--primary-white-color);
 }
 
 .button {
   border-radius: 4px;
-  padding: 10px 32px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 32px;
+  padding-right: 32px;
   font-family: inherit;
   cursor: pointer;
-  text-align: center;
   border: 1px solid transparent;
+  border: none;
+  cursor: pointer;
 }
 
 .button.primery {
@@ -159,9 +241,36 @@ body {
 /* end title */
 
 /* features */
-.features-title {
+.section-features {
+  padding-bottom: 0;
+}
+
+.features {
+  display: flex;
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.features-item {
+  flex-basis: calc((100% - 3 * 30px) / 4);
+}
+
+.features-item + .features-item {
+  margin-left: 30px;
+}
+
+.visually-hidden {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  color: var(--title-text-color);
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+.features-title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -170,45 +279,71 @@ body {
 }
 
 .features-text {
-  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 0;
   line-height: 1.71;
+  color: var(--title-text-color);
 }
 /* end features */
 
 /* direction */
 .direction-title {
-  margin-top: 0;
-  margin-bottom: 50px;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
   color: var(--title-text-color);
+}
+
+.direction-item {
+  flex-basis: calc((100% - 2 * 30px) / 3);
+}
+
+.direction-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.direction {
+  display: flex;
+  padding: 0;
 }
 
 /* end direction */
 
 /* team */
+.foto {
+  padding: 30px 24px;
+}
+
+.team {
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.team-item {
+  flex-basis: calc((100% - 3 * 30px) / 4);
+  text-align: center;
+  background-color: var(--primary-white-color);
+  border-radius: 0 0 4px 4px;
+  drop-shadow: (0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.team-item + .team-item {
+  margin-left: 30px;
+}
+
 .section-team {
   background-color: var(--secondary-bg-color);
 }
 
 .team-title {
-  margin-top: 0;
-  margin-bottom: 50px;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
   color: var(--title-text-color);
 }
 
-.team-foto {
-  margin-top: 0;
-  margin-bottom: 30px;
-}
-
 .team-expert {
-  margin-top: 0;
-  margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -220,12 +355,21 @@ body {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 /* end team */
 
 /* footer */
 .footer {
-  background: var(--primary-color-hf);
+  background-color: var(--primary-color-hf);
+  padding-top: 60px;
+  padding-bottom: 60px;
+  color: var(--primary-white-color);
+}
+
+.footer .container {
+  display: flex;
 }
 
 .footer .a {
@@ -233,14 +377,14 @@ body {
 }
 
 .footer-logo {
-  margin-top: 0;
-  margin-bottom: 20px;
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: var(--accent-color);
+  display: block;
+  margin-bottom: 20px;
 }
 
 .footer-logo-studio {
@@ -256,9 +400,13 @@ body {
   color: var(--accent-color);
 }
 
-.address {
-  margin-top: 0;
+.footer-address-item:not(:last-child) {
   margin-bottom: 9px;
+}
+
+.footer-contact {
+  line-height: 1.71;
+  padding: 0;
 }
 
 .footer-address-link {
@@ -310,14 +458,7 @@ body {
 
 /* portfolio service */
 
-.service-jpg {
-  margin-top: 0;
-  margin-bottom: 20px;
-}
-
 .service-title {
-  margin-top: 0;
-  margin-bottom: 4px;
   font-weight: bold;
   font-size: 18px;
   line-height: 2;
