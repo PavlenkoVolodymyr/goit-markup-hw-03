@@ -104,10 +104,10 @@ body {
   color: var(--accent-color);
   text-decoration: none;
   display: block;
-  margin-right: 50px;
+  margin-right: 93px;
 }
 
-.header-nav-menu-item {
+.header-nav-menu-item:not(:first-child) {
   margin-left: 50px;
 }
 
@@ -123,12 +123,12 @@ body {
   padding: 0;
 }
 
-.header-contact {
-  margin-left: auto;
+.header-contact-item {
+  margin-left: 50px;
 }
 
-.header-contact-tel {
-  margin-left: 50px;
+.header-contact {
+  margin-left: auto;
 }
 
 .header-nav-menu .header-nav-menu-link {
@@ -189,11 +189,6 @@ body {
   background-color: var(--primary-color-hf);
   color: var(--primary-white-color);
   text-align: center;
-}
-
-.title .container {
-  padding-left: 250px;
-  padding-right: 250px;
 }
 
 .title-text {
@@ -267,7 +262,7 @@ body {
 }
 
 .features-item {
-  flex-basis: calc((100% - 4 * 30px) / 4);
+  flex-basis: calc((100% - 3 * 30px) / 4);
 }
 
 .features-item + .features-item {
@@ -290,6 +285,7 @@ body {
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--title-text-color);
+  margin-bottom: 10px;
 }
 
 .features-text {
@@ -306,6 +302,7 @@ body {
   line-height: 1.17;
   text-align: center;
   color: var(--title-text-color);
+  margin-bottom: 50px;
 }
 
 .direction-item {
@@ -336,7 +333,7 @@ body {
 }
 
 .team-item {
-  flex-basis: calc((100% - 4 * 30px) / 4);
+  flex-basis: calc((100% - 3 * 30px) / 4);
   text-align: center;
   background-color: var(--primary-white-color);
   border-radius: 0 0 4px 4px;
@@ -355,6 +352,7 @@ body {
   line-height: 1.17;
   text-align: center;
   color: var(--title-text-color);
+  margin-bottom: 50px;
 }
 
 .team-expert {
@@ -363,6 +361,7 @@ body {
   line-height: 1.19;
   text-align: center;
   color: var(--title-text-color);
+  margin-bottom: 10px;
 }
 
 .team-specialty {
